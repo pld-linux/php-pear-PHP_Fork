@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          PHP
-%define         _subclass       Fork
+%define		_class		PHP
+%define		_subclass	Fork
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 

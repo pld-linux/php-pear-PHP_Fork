@@ -46,7 +46,7 @@ This class has in PEAR status: %{_status}.
 %description -l pl
 Klasa PHP_Fork. Wrapper dla zbioru funkcji pcntl_fork() i pochodnych z
 API zbli¿onym do jêzyka Javy. Praktyczne zastosowanie polega na
-rozszerzenieu tej klasy i przedefiniowaniu metody run().
+rozszerzeniu tej klasy i przedefiniowaniu metody run().
 
 Dziêki temu deweloper PHP mo¿e zamkn±æ warstwê logiczn± wewn±trz klasy
 rozszerzaj±cej PHP_Fork, a nastêpnie uruchomiæ metodê start() która
@@ -64,7 +64,7 @@ metody:
 $name musi byæ poprawn± zmienn± PHP;
 $value musi byæ zmienn± lub obiektem mo¿liwym do serializacji.
 
-Zasoby (po³±czenia z bazami danych, strumenie, itp) nie mog± byæ
+Zasoby (po³±czenia z bazami danych, strumienie, itp) nie mog± byæ
 zserializowane i jako takie nie s± poprawnie obs³ugiwane.
 
 Ta klasa ma w PEAR status: %{_status}.

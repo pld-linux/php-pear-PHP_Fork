@@ -48,7 +48,7 @@ Klasa PHP_Fork. Wrapper dla zbioru funkcji pcntl_fork() i pochodnych z
 API zbli¿onym do jêzyka Javy. Praktyczne zastosowanie polega na
 rozszerzenieu tej klasy i przedefiniowaniu metody run().
 
-W ten sposób deweloper PHP mo¿e zamkn±æ logikê wewn±trz klasy
+Dziêki temu deweloper PHP mo¿e zamkn±æ warstwê logiczn± wewn±trz klasy
 rozszerzaj±cej PHP_Fork, a nastêpnie uruchomiæ metodê start() która
 wywo³a proces potomny. Komunikacja z nowo powsta³ym procesem jest
 zapewniona za pomoc± Segmentu Wspó³dzielonej Pamiêci (Shared Memory
@@ -56,7 +56,7 @@ Segment); u¿ywaj±c zdefiniowanych przez u¿ytkownika sygna³ów i tej¿e
 dzielonej pamiêci deweloperzy maj± dostêp do metod procesu potomnego,
 które zwraca zmienn± daj±ca siê zserializowaæ.
 
-Dostêp do dzielonej przestrzeñi zmiennej jest mo¿liwi przez dwie
+Dostêp do dzielonej przestrzeni zmiennych jest mo¿liwy poprzez dwie
 metody:
 - void setVariable($name, $value)
 - mixed getVariable($name)

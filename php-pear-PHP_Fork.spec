@@ -13,7 +13,7 @@ License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	8ecf5ea9cdde0ab2d6d962d380d63323
-URL:		http://pear.php.net/package/Class_Subclass/
+URL:		http://pear.php.net/package/PHP_Fork/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
 BuildArch:	noarch
@@ -23,7 +23,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 PHP_Fork class. Wrapper around the pcntl_fork() stuff with a API set
 like Java language. Practical usage is done by extending this class,
 and re-defining the run() method.
-[see basic example]
 
 This way PHP developers can enclose logic into a class that extends
 PHP_Fork, then execute the start() method that forks a child process.
@@ -44,10 +43,31 @@ they're not correctly handled.
 
 This class has in PEAR status: %{_status}.
 
-#%description -l pl
-#...
-#
-#Ta klasa ma w PEAR status: %{_status}.
+%description -l pl
+Klasa PHP_Fork. Wrapper dla zbioru funkcji pcntl_fork() i pochodnych z
+API zbli¿onym do jêzyka Javy. Praktyczne zastosowanie polega na
+rozszerzenieu tej klasy i przedefiniowaniu metody run().
+
+W ten sposób deweloper PHP mo¿e zamkn±æ logikê wewn±trz klasy
+rozszerzaj±cej PHP_Fork, a nastêpnie uruchomiæ metodê start() która
+wywo³a proces potomny. Komunikacja z nowo powsta³ym procesem jest
+zapewniona za pomoc± Segmentu Wspó³dzielonej Pamiêci (Shared Memory
+Segment); u¿ywaj±c zdefiniowanych przez u¿ytkownika sygna³ów i tej¿e
+dzielonej pamiêci deweloperzy maj± dostêp do metod procesu potomnego,
+które zwraca zmienn± daj±ca siê zserializowaæ.
+
+Dostêp do dzielonej przestrzeñi zmiennej jest mo¿liwi przez dwie
+metody:
+- void setVariable($name, $value)
+- mixed getVariable($name)
+
+$name musi byæ poprawn± zmienn± PHP;
+$value musi byæ zmienn± lub obiektem mo¿liwym do serializacji.
+
+Zasoby (po³±czenia z bazami danych, strumenie, itp) nie mog± byæ
+zserializowane i jako takie nie s± poprawnie obs³ugiwane.
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c

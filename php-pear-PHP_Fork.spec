@@ -41,7 +41,7 @@ $value must be a variable or a serializable object.
 Resources (db connections, streams, etc.) cannot be serialized and so
 they're not correctly handled.
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 Klasa PHP_Fork. Wrapper dla zbioru funkcji pcntl_fork() i pochodnych z

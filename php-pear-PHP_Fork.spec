@@ -8,14 +8,17 @@ Summary:	%{_pearname} - Wrapper for pcntl_fork() with Java-like API
 Summary(pl):	%{_pearname} - Wrapper dla pcntl_fork() z API zbli¿onym do Javy
 Name:		php-pear-%{_pearname}
 Version:	0.3.0
-Release:	1
+Release:	1.1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	fd79cedf8c57d074757d4362beab41bf
 URL:		http://pear.php.net/package/PHP_Fork/
-BuildRequires:	rpm-php-pearprov >= 4.0.2-98
-Requires:	php-pear
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+Requires:	php-pear >= 4:1.0-7
+Requires:	php-pcntl
+Requires:	php-shmop
+Requires:	php-posix
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -70,18 +73,19 @@ zserializowane i jako takie nie s± poprawnie obs³ugiwane.
 Ta klasa ma w PEAR status: %{_status}.
 
 %prep
-%setup -q -c
+%pear_package_setup
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-
-install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}
+%pear_package_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/examples
+%doc install.log optional-packages.txt
+%doc docs/%{_pearname}/examples
+%{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php

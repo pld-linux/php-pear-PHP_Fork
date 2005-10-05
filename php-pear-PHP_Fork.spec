@@ -8,7 +8,7 @@ Summary:	%{_pearname} - Wrapper for pcntl_fork() with Java-like API
 Summary(pl):	%{_pearname} - Wrapper dla pcntl_fork() z API zbli¿onym do Javy
 Name:		php-pear-%{_pearname}
 Version:	0.3.0
-Release:	1.1
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz

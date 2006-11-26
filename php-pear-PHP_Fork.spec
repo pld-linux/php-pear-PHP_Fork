@@ -8,7 +8,7 @@ Summary:	%{_pearname} - Wrapper for pcntl_fork() with Java-like API
 Summary(pl):	%{_pearname} - Wrapper dla pcntl_fork() z API zbli¿onym do Javy
 Name:		php-pear-%{_pearname}
 Version:	0.3.0
-Release:	2
+Release:	3
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -17,10 +17,10 @@ URL:		http://pear.php.net/package/PHP_Fork/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
+Requires:	php(pcntl)
+Requires:	php(posix)
+Requires:	php(shmop)
 Requires:	php-pear >= 4:1.0-7
-Requires:	php-pcntl
-Requires:	php-shmop
-Requires:	php-posix
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -40,8 +40,8 @@ The shared variable space can be accessed with the two methods:
 - void setVariable($name, $value)
 - mixed getVariable($name)
 
-$name must be a valid PHP variable name;
-$value must be a variable or a serializable object.
+$name must be a valid PHP variable name; $value must be a variable or
+a serializable object.
 
 Resources (db connections, streams, etc.) cannot be serialized and so
 they're not correctly handled.
@@ -66,8 +66,8 @@ metody:
 - void setVariable($name, $value)
 - mixed getVariable($name)
 
-$name musi byæ poprawn± zmienn± PHP;
-$value musi byæ zmienn± lub obiektem mo¿liwym do serializacji.
+$name musi byæ poprawn± zmienn± PHP; $value musi byæ zmienn± lub
+obiektem mo¿liwym do serializacji.
 
 Zasoby (po³±czenia z bazami danych, strumienie, itp) nie mog± byæ
 zserializowane i jako takie nie s± poprawnie obs³ugiwane.

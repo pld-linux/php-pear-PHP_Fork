@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - Wrapper for pcntl_fork() with Java-like API
-Summary(pl):	%{_pearname} - Wrapper dla pcntl_fork() z API zbli¿onym do Javy
+Summary(pl.UTF-8):   %{_pearname} - Wrapper dla pcntl_fork() z API zbliÅ¼onym do Javy
 Name:		php-pear-%{_pearname}
 Version:	0.3.0
 Release:	1
@@ -43,29 +43,29 @@ they're not correctly handled.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
+%description -l pl.UTF-8
 Klasa PHP_Fork. Wrapper dla zbioru funkcji pcntl_fork() i pochodnych z
-API zbli¿onym do jêzyka Javy. Praktyczne zastosowanie polega na
+API zbliÅ¼onym do jÄ™zyka Javy. Praktyczne zastosowanie polega na
 rozszerzeniu tej klasy i przedefiniowaniu metody run().
 
-Dziêki temu deweloper PHP mo¿e zamkn±æ warstwê logiczn± wewn±trz klasy
-rozszerzaj±cej PHP_Fork, a nastêpnie uruchomiæ metodê start() która
-wywo³a proces potomny. Komunikacja z nowo powsta³ym procesem jest
-zapewniona za pomoc± Segmentu Wspó³dzielonej Pamiêci (Shared Memory
-Segment); u¿ywaj±c zdefiniowanych przez u¿ytkownika sygna³ów i tej¿e
-dzielonej pamiêci deweloperzy maj± dostêp do metod procesu potomnego,
-które zwraca zmienn± daj±ca siê zserializowaæ.
+DziÄ™ki temu deweloper PHP moÅ¼e zamknÄ…Ä‡ warstwÄ™ logicznÄ… wewnÄ…trz klasy
+rozszerzajÄ…cej PHP_Fork, a nastÄ™pnie uruchomiÄ‡ metodÄ™ start() ktÃ³ra
+wywoÅ‚a proces potomny. Komunikacja z nowo powstaÅ‚ym procesem jest
+zapewniona za pomocÄ… Segmentu WspÃ³Å‚dzielonej PamiÄ™ci (Shared Memory
+Segment); uÅ¼ywajÄ…c zdefiniowanych przez uÅ¼ytkownika sygnaÅ‚Ã³w i tejÅ¼e
+dzielonej pamiÄ™ci deweloperzy majÄ… dostÄ™p do metod procesu potomnego,
+ktÃ³re zwraca zmiennÄ… dajÄ…ca siÄ™ zserializowaÄ‡.
 
-Dostêp do dzielonej przestrzeni zmiennych jest mo¿liwy poprzez dwie
+DostÄ™p do dzielonej przestrzeni zmiennych jest moÅ¼liwy poprzez dwie
 metody:
 - void setVariable($name, $value)
 - mixed getVariable($name)
 
-$name musi byæ poprawn± zmienn± PHP;
-$value musi byæ zmienn± lub obiektem mo¿liwym do serializacji.
+$name musi byÄ‡ poprawnÄ… zmiennÄ… PHP;
+$value musi byÄ‡ zmiennÄ… lub obiektem moÅ¼liwym do serializacji.
 
-Zasoby (po³±czenia z bazami danych, strumienie, itp) nie mog± byæ
-zserializowane i jako takie nie s± poprawnie obs³ugiwane.
+Zasoby (poÅ‚Ä…czenia z bazami danych, strumienie, itp) nie mogÄ… byÄ‡
+zserializowane i jako takie nie sÄ… poprawnie obsÅ‚ugiwane.
 
 Ta klasa ma w PEAR status: %{_status}.
 

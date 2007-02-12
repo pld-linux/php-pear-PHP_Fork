@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - Wrapper for pcntl_fork() with Java-like API
-Summary(pl.UTF-8):   %{_pearname} - Wrapper dla pcntl_fork() z API zbliżonym do Javy
+Summary(pl.UTF-8):	%{_pearname} - Wrapper dla pcntl_fork() z API zbliżonym do Javy
 Name:		php-pear-%{_pearname}
 Version:	0.3.0
 Release:	3

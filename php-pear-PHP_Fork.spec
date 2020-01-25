@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_status		beta
 %define		_pearname	PHP_Fork
 Summary:	%{_pearname} - Wrapper for pcntl_fork() with Java-like API
